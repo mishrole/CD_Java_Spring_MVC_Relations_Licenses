@@ -45,7 +45,7 @@ public class LicenseService implements ILicenseService {
 			data.setNumber(license.getNumber());
 			data.setExpirationDate(license.getExpirationDate());
 			data.setState(license.getState());
-			data.setPerson(license.getPerson());
+			//data.setPerson(license.getPerson());
 			
 			return licenseRepository.save(data);
 		}

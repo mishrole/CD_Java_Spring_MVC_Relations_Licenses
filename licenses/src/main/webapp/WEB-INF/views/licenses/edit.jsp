@@ -22,45 +22,51 @@
 				<h3 class="text-center">Edit Book</h3>
 				<div class="card">
 					<div class="card-body">
-						<form:form action="/books/${book.id}" method="POST" id="validate" modelAttribute="book">
-							<input type="hidden" name="_method" value="PUT">
-							
+						<form:form action="/licenses/${license.id}" method="POST" id="validate" modelAttribute="license">
+						<input type="hidden" name="_method" value="PUT">
 							<div class="row mx-auto">
 								<div class="col-12">
 									<div class="form-floating mb-3">
-									  <form:input path="title" type="text" class="form-control requires-validation validate-save" name="title" id="title"/>
+									  <form:input path="number" type="text" class="form-control requires-validation validate-save" name="number" id="number" />
 									  <div class="invalid-feedback"></div>
-									  <form:errors path="title" class="text-danger backend-validation" />
-									  <form:label for="title" path="title">Title</form:label>
+									  <form:errors path="number" class="text-danger backend-validation" />
+									  <form:label for="number" path="number">Number</form:label>
+									</div>
+								</div>
+								
+								<div class="col-12">
+									<div class="form-floating mb-3">
+									  <form:input path="expirationDate" type="date" class="form-control requires-validation validate-save" name="expirationDate" id="expirationDate" />
+									  <div class="invalid-feedback"></div>
+									  <form:errors path="expirationDate" class="text-danger backend-validation" />
+									  <form:label path="expirationDate" for="expirationDate">Expiration Date</form:label>
+									</div>
+								</div>
+								
+								<div class="col-12">
+									<div class="form-floating mb-3">
+									  <form:input path="state" type="text" class="form-control requires-validation validate-save" name="state" id="state" />
+									  <div class="invalid-feedback"></div>
+									  <form:errors path="state" class="text-danger backend-validation" />
+									  <form:label path="state" for="state">State</form:label>
 									</div>
 								</div>
 
-								<div class="col-12">
+								<!--<div class="col-12">
 									<div class="form-floating mb-3">
-									  <form:textarea path="description" name="description" class="form-control requires-validation validate-save" id="description"></form:textarea>
-									  <div class="invalid-feedback"></div>
-									  <form:errors path="description" class="text-danger backend-validation" />
-									  <form:label path="description" for="description">Description</form:label>
+										<form:select path="person" id="person" class="form-select requires-validation validate-save ">
+									        <c:forEach var="onePerson" items="${persons_list}">
+									            <form:option value="${onePerson.id}" path="person">
+									                <c:out value="${onePerson.firstName}"/>
+									                <c:out value="${onePerson.lastName}" />
+									            </form:option>
+									        </c:forEach>
+									    </form:select>
+										<div class="invalid-feedback"></div>
+										<form:errors path="person" class="text-danger backend-validation" />
+										<label for="person">Select a person</label>
 									</div>
-								</div>
-								
-								<div class="col-12">
-									<div class="form-floating mb-3">
-									  <form:input path="language" type="text" class="form-control requires-validation validate-save" name="language" id="language" />
-									  <div class="invalid-feedback"></div>
-									  <form:errors path="language" class="text-danger backend-validation" />
-									  <form:label path="language" for="language">Language</form:label>
-									</div>
-								</div>
-								
-								<div class="col-12">
-									<div class="form-floating mb-3">
-									  <form:input path="numberOfPages" type="number" class="form-control requires-validation validate-save validate-minimum" name="numberOfPages" id="numberOfPages" min="100" />
-									  <div class="invalid-feedback"></div>
-									  <form:errors path="numberOfPages" class="text-danger backend-validation" />
-									  <label for=numberOfPages>Number of Pages</label>
-									</div>
-								</div>
+								</div>-->
 								
 								<div class="col-12">
 									<div class="d-flex align-items-center justify-content-end">

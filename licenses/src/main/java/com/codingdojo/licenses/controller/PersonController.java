@@ -63,7 +63,7 @@ public class PersonController {
 		return "redirect:/persons";
 	}
 	
-	@RequestMapping(method = RequestMethod.PUT)
+	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
 	public String update(@PathVariable("id") Long id, @Valid @ModelAttribute("person") Person person, BindingResult result) {
 		if (result.hasErrors()) {
 			return "persons/edit";

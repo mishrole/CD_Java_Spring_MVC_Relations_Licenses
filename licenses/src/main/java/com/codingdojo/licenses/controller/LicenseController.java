@@ -70,7 +70,7 @@ public class LicenseController {
 		return "redirect:/licenses";
 	}
 	
-	@RequestMapping(method = RequestMethod.PUT)
+	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
 	public String update(@PathVariable("id") Long id, @Valid @ModelAttribute("license") License license, BindingResult result) {
 		if (result.hasErrors()) {
 			return "licenses/edit";

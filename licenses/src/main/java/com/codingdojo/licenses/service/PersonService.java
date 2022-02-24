@@ -44,7 +44,7 @@ public class PersonService implements IPersonService {
 			Person data = optionalPerson.get();
 			data.setFirstName(person.getFirstName());
 			data.setLastName(person.getLastName());
-			data.setLicense(person.getLicense());
+			//data.setLicense(person.getLicense());
 			
 			return personRepository.save(data);
 		}

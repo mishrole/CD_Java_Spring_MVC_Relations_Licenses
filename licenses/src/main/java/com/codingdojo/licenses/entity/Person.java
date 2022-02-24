@@ -46,7 +46,7 @@ public class Person {
     
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    @OneToOne(mappedBy="person", cascade=CascadeType.ALL, fetch=FetchType.LAZY, orphanRemoval = true)
+    @OneToOne(mappedBy="person", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
     private License license;
     
     public Person() {}

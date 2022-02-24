@@ -49,7 +49,7 @@ public class License {
     
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    @OneToOne(fetch=FetchType.LAZY, optional=false, orphanRemoval = true)
+    @OneToOne(fetch=FetchType.LAZY, optional=false)
     @JoinColumn(name="person_id", nullable=false)
     private Person person;
     
